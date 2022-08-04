@@ -51,7 +51,7 @@ async def download_file(client, message):
 
     details = json.loads(output[0])
     buttons = []
-    DATA[f"{message.chat.id}-{msg.message_id}"] = {}
+    DATA[f"{message.chat.id}-{message.id}"] = {}
     for stream in details["streams"]:
         mapping = stream["index"]
         stream_name = stream["codec_name"]
